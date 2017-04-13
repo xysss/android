@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ImageView_widget"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/shouhuantuan"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/ImageView_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:text="全速连接中..."
+            android:textColor="@color/bangdingshebei"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bangdingshebei" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <ProgressBar
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/bangdingshebei_tishikuang_ProgressBar_widget"
+            android:layout_width="wrap_content">
+        </ProgressBar>
+
+        <TextView
+            android:layout_toRightOf="@+id/bangdingshebei_tishikuang_ProgressBar_widget"
+            android:id="@+id/bangdingshebei_tishikuang_TextView_widget"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索设备中..."
+            android:textColor="#000" />
+    </RelativeLayout>
+
+
+</LinearLayout>
