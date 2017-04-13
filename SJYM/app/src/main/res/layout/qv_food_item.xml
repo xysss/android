@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:weightSum="10">
+    <TextView
+        android:id="@+id/qv_food_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5.30"
+        android:textSize="50sp"
+        android:text="苹果"/>
+    <TextView
+        android:id="@+id/qv_food_whether_enough"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5.89"
+        android:layout_marginLeft="0dp"
+        android:textSize="50sp"
+        android:text="即将过期"/>
+
+</LinearLayout>

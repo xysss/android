@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:text="食品名称"
+            android:textSize="25dp"
+
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="保质状态"
+            android:textSize="25dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="剩余天数"
+            android:textSize="25dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_marginTop="100dp"
+    android:layout_height="400dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/food_quick_view"
+        android:layout_alignParentStart="true">
+    </android.support.v7.widget.RecyclerView>
+</android.support.v7.widget.CardView>
+</RelativeLayout>
