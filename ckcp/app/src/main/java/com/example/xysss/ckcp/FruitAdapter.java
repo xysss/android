@@ -3,7 +3,6 @@ package com.example.xysss.ckcp;
 /**
  * Created by xysss on 2017/4/12.
  */
-
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
@@ -16,11 +15,20 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import com.example.xysss.ckcp.sixitem.Qita1;
+
+import com.example.xysss.ckcp.sixitem.Roulei1;
+import com.example.xysss.ckcp.sixitem.Shucai;
+import com.example.xysss.ckcp.sixitem.Shuiguo;
+
+import com.example.xysss.ckcp.sixitem.Xuegao1;
+import com.example.xysss.ckcp.sixitem.Yinpin1;
+
 import java.util.List;
 
 public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
 
-    private static final String TAG = "FruitAdapter";
+    //private  final String TAG = "FruitAdapter";
 
     private Context mContext;
 
@@ -31,11 +39,14 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
         ImageView fruitImage;
         TextView fruitName;
 
+        //TextView fruitName0;
+
         public ViewHolder(View view) {
             super(view);
             cardView = (CardView) view;
             fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
             fruitName = (TextView) view.findViewById(R.id.fruit_name);
+            //fruitName0 = (TextView) view.findViewById(R.id.fruit_name0);
         }
     }
 
@@ -55,13 +66,43 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
                 Fruit fruit = mFruitList.get(position);
-                Intent intent = new Intent(mContext, FruitActivity.class);
-                intent.putExtra(FruitActivity.FRUIT_NAME, fruit.getName());
-                intent.putExtra(FruitActivity.FRUIT_IMAGE_ID, fruit.getImageId());
-                mContext.startActivity(intent);
+                switch (fruit.getImageId()) {
+                    case R.drawable.apple:
+//                        ((Myapp) getApplication()).setValue(line);//赋值操作
+//                        ((Myapp) getApplication()).getValue();
+                        Intent intent1= new Intent(mContext, Shuiguo.class);
+                        mContext.startActivity(intent1);
+                        break;
+                    case R.drawable.c:
+                        Intent intent2 = new Intent(mContext, Shucai.class);
+                        intent2.putExtra("ll","2");
+                        mContext.startActivity(intent2);
+                        break;
+                    case R.drawable.yp:
+                        Intent intent3 = new Intent(mContext, Yinpin1.class);
+                        intent3.putExtra("ll","3");
+                        mContext.startActivity(intent3);
+                        break;
+                    case R.drawable.rr:
+                        Intent intent4 = new Intent(mContext, Roulei1.class);
+                        intent4.putExtra("ll","4");
+                        mContext.startActivity(intent4);
+                        break;
+                    case R.drawable.xg:
+                        Intent intent5 = new Intent(mContext, Xuegao1.class);
+                        intent5.putExtra("ll","5");
+                        mContext.startActivity(intent5);
+                        break;
+                    case R.drawable.gd:
+                        Intent intent6 = new Intent(mContext, Qita1.class);
+                        intent6.putExtra("ll","6");
+                        mContext.startActivity(intent6);
+                        break;
+                }
             }
         });
         return holder;
+        //return new ViewHolder(view);
     }
 
     @Override
@@ -75,5 +116,4 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
     public int getItemCount() {
         return mFruitList.size();
     }
-
 }

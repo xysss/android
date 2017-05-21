@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="1342025166@qq.com"
+        android:text="全部功能模块："
         android:textColor="#FFF"
         android:textSize="14sp" />
 
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/username"
-        android:text="徐永胜"
+        android:text="信息冰箱"
         android:textColor="#FFF"
         android:textSize="14sp" />
 

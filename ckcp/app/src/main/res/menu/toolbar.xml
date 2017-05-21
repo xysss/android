@@ -5,12 +5,12 @@
         android:id="@+id/backup"
         android:icon="@drawable/ic_backup"
         android:title="Backup"
-        app:showAsAction="always"/>
+        app:showAsAction="never"/>
     <item
         android:id="@+id/delete"
         android:icon="@drawable/ic_delete"
         android:title="Delete"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
     <item
         android:id="@+id/settings"
         android:icon="@drawable/ic_settings"

@@ -2,25 +2,34 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.xysss.ckcp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".Myapp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="查看食品"
+        android:icon="@drawable/fridge"
+        android:label="Refrigerators"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".FruitActivity"
-            android:theme="@style/FruitActivityTheme">
-        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".item.Cxcp" />
+        <activity android:name=".item.Tscp" />
+        <activity android:name=".bx_item.Ckwp" />
+        <activity android:name=".sixitem.Shuiguo"/>
+        <activity android:name=".sixitem.Shucai" />
+        <activity android:name=".sixitem.Roulei1" />
+        <activity android:name=".sixitem.Yinpin1" />
+        <activity android:name=".sixitem.Xuegao1" />
+        <activity android:name=".sixitem.Qita1" />
+        <activity android:name=".sixitem.Gqck"></activity>
     </application>
 
 </manifest>
