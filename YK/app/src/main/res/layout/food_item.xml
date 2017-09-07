@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp" >
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="食品名称"
+            android:textSize="22dp"
+            android:id="@+id/food_name"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="食品重量"
+            android:textSize="22dp"
+            android:id="@+id/food_name1"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="保质状态"
+            android:textSize="22dp"
+            android:id="@+id/food_name2"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="剩余天数"
+            android:textSize="22dp"
+            android:layout_width="95dp"
+            android:id="@+id/food_name3"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

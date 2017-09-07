@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.xysss.ckcp">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <!-- begin: baidu speech sdk -->
+    <!-- 请填写应用实际的APP_ID -->
+    <meta-data
+        android:name="com.baidu.speech.APP_ID"
+        android:value="9722227" />
+    <!-- 请填写应用实际的API_KEY -->
+    <meta-data
+        android:name="com.baidu.speech.API_KEY"
+        android:value="DspU1hDgD8OfXziAfK9Humto" />
+    <!-- 请填写应用实际的SECRET_KEY -->
+    <meta-data
+        android:name="com.baidu.speech.SECRET_KEY"
+        android:value="0415ab3f7f11e779badd594c01f5f6f4" />
+
+    <service
+        android:name="com.baidu.speech.VoiceRecognitionService"
+        android:exported="false" />
+
+    <application
+        android:name=".Myapp"
+        android:allowBackup="true"
+        android:icon="@drawable/y"
+        android:label="易控"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Main2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".item.Cxcp" />
+        <activity android:name=".item.Tscp" />
+        <activity android:name=".bx_item.Ckwp" />
+        <activity android:name=".sixitem.Shuiguo" />
+        <activity android:name=".sixitem.Shucai" />
+        <activity android:name=".sixitem.Roulei1" />
+        <activity android:name=".sixitem.Yinpin1" />
+        <activity android:name=".sixitem.Xuegao1" />
+        <activity android:name=".sixitem.Qita1" />
+        <activity android:name=".sixitem.Gqck" />
+        <activity android:name=".Second" />
+
+        <service
+            android:name=".MyService1"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

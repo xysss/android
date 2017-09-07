@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<group android:checkableBehavior="single">-->
+
+        <!--<item-->
+            <!--android:id="@+id/nav_ckqb"-->
+            <!--android:icon="@drawable/nav_task"-->
+            <!--android:title="查看全部" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/nav_tscp"-->
+            <!--android:icon="@drawable/nav_task"-->
+            <!--android:title="提示菜谱" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/nav_yxcx"-->
+            <!--android:icon="@drawable/nav_task"-->
+            <!--android:title="影像查询" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/nav_cxcp"-->
+            <!--android:icon="@drawable/nav_task"-->
+            <!--android:title="菜肴制作" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/nav_gqck"-->
+            <!--android:icon="@drawable/nav_task"-->
+            <!--android:title="过期查看" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_zxgm"-->
+            <!--android:icon="@drawable/nav_task"-->
+            <!--android:title="在线购物" />-->
+    <!--</group>-->
+</menu>

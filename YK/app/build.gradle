@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.youth.android"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //配置.so文件！
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'x86', 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+        }
+
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        //配置JNILibs
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+    }
+
+//    sourceSets.main{
+//        //让AS识别libs下的.so第三方包
+//        jniLibs.srcDirs =['libs']
+//    }
+
+    android{
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+    }
+}
+
+task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs") {
+    destinationDir file("$projectDir/libs")
+    baseName "Native_Libs2"
+    extension "jar"
+    from fileTree(dir: "libs", include: "armeabi/*.so")
+    into "lib"
+}
+
+tasks.withType(JavaCompile) {
+    compileTask -> compileTask.dependsOn(nativeLibsToJar)
+}
+
+
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+//    引入Design support库
+    //    引入开源项目CircleiMageview
+
+
+    compile files('libs/Baidu-SpeechRecognitionUI-SDK-Android-1.6.2.jar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    testCompile 'junit:junit:4.12'
+}
